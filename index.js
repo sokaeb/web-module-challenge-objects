@@ -142,15 +142,15 @@ and should return an array of objects.
 
                       
 
-                        function getLongestReviews(arr) {
-                          let longReviews = []; 
-                        for(i = 0; i < arr.length; i++){
-                          if(arr[i].feedback.split(' ').length > 15) {
-                              longReviews.push(arr[i]); }
-                          }
-                          return longReviews;
-                        }
-                        console.log(getLongestReviews(reviews));
+                        // function getLongestReviews(arr) {
+                        //   let longReviews = []; 
+                        // for(i = 0; i < arr.length; i++){
+                        //   if(arr[i].feedback.split(' ').length > 15) {
+                        //       longReviews.push(arr[i]); }
+                        //   }
+                        //   return longReviews;
+                        // }
+                        // console.log(getLongestReviews(reviews));
 
 
                         // console.log(reviews[0].feedback.split(' '));  -- to check the number of words in the string
@@ -174,7 +174,13 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
-}
+function carMaker(num) {
+  return {'odometer': num, 'drive': function(dist){ 
+    odometer = num*dist
+      return odometer; 
+      }   
+    }
+  }
+  console.log(carMaker(5));
+
+  
